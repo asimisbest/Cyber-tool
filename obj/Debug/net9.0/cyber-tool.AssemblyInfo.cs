@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("cyber-tool")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a96639a8a55c6e5305e2c2b991a1a14b0c6f4fb9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+de650a195478f75c7ffdfd3f42d978c32eeaf57d")]
 [assembly: System.Reflection.AssemblyProductAttribute("cyber-tool")]
 [assembly: System.Reflection.AssemblyTitleAttribute("cyber-tool")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

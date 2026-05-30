@@ -7,10 +7,9 @@ namespace cyber_tool
 {
     public class Baseline
     {
-        public static void CreateBaseline()
+        public static void CreateBaseline(string folderPath)
         {
-            // Folder to scan
-            string folderPath = @"C:\MyFolder";
+            
 
             // Get all files
             string[] files = Directory.GetFiles(folderPath);
@@ -19,12 +18,14 @@ namespace cyber_tool
             Dictionary<string, string> baselineData = new Dictionary<string, string>();
 
             // Hash each file
-            foreach (string file in files)
-            {
-                string hash = FileHasher.GetSha256Hash(file);
-
-                baselineData[file] = hash;
-            }
+           foreach (string file in files)
+{
+    using (FileStream stream = File.OpenRead(file))
+    {
+        string hash = FileHasher.GetSha256Hash(stream);
+        baselineData[file] = hash;
+    }
+}
 
             // Convert dictionary to JSON
             string json = JsonSerializer.Serialize(
